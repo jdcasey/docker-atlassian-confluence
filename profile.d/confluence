@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "Setting Confluence envars"
+export CONF_INSTALL=$(ls -1d /opt/atlassian/* | head -1)
+
+export CONF_HOME=/var/atlassian/confluence
