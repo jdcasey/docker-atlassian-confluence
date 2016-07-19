@@ -43,10 +43,10 @@ RUN chmod +x /usr/local/bin/* /etc/profile.d/* \
 #                               "${CONF_INSTALL}/conf/server.xml" \
 #    && touch -d "@0"           "${CONF_INSTALL}/conf/server.xml"
 
-#ENTRYPOINT ["/usr/local/bin/dumb-init", "/usr/local/bin/docker-entrypoint.sh"]
-
 # Use the default unprivileged account. This could be considered bad practice
 # on systems where multiple processes end up being executed by 'daemon' but
 # here we only ever run one process anyway.
 USER daemon:daemon
+
+ENTRYPOINT ["/usr/local/bin/dumb-init", "/usr/local/bin/docker-entrypoint.sh"]
 

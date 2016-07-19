@@ -1,6 +1,6 @@
 #!/bin/bash
 
-JHOME=$(ls -1d /opt/jdk | head -1)
+JHOME=$(ls -1d /opt/jdk/* | head -1)
 
 export JAVA_HOME="$JHOME"
 export PATH=$JAVA_HOME/bin:$PATH
